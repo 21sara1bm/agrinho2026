@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p>O equilíbrio entre a produção e a preservação do meio ambiente</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Tecnologia a Serviço da Natureza</h2>
+            <p>O futuro da agricultura depende de práticas que garantam o alimento na mesa e a saúde do planeta. Clique nos pilares abaixo para explorar!</p>
+        </section>
+
+        <section class="grid-pilares">
+            <div class="card" onclick="mostrarDetalhes('tecnologia')">
+                <h3>Agricultura de Precisão</h3>
+                <p>Uso de drones e sensores para economizar água e insumos.</p>
+            </div>
+            <div class="card" onclick="mostrarDetalhes('preservacao')">
+                <h3>Preservação Ambiental</h3>
+                <p>Manutenção de matas ciliares e áreas de reserva legal.</p>
+            </div>
+            <div class="card" onclick="mostrarDetalhes('energia')">
+                <h3>Energia Limpa</h3>
+                <p>Biogás e energia solar alimentando a produção rural.</p>
+            </div>
+        </section>
+
+        <section id="painel-detalhes" class="detalhes escondido">
+            <h3 id="titulo-detalhe">Selecione um pilar</h3>
+            <p id="texto-detalhe">Conteúdo informativo aparecerá aqui.</p>
+        </section>
+
+        <section class="simulador">
+            <h2>Simulador de Fazenda Sustentável</h2>
+            <p>Ative as práticas sustentáveis e veja o nível de equilíbrio da sua fazenda:</p>
+            
+            <div class="controles">
+                <label>
+                    <input type="checkbox" id="chk-plantio" onchange="calcularSustentabilidade()"> Plantio Direto
+                </label>
+                <label>
+                    <input type="checkbox" id="chk-agua" onchange="calcularSustentabilidade()"> Reuso de Água
+                </label>
+                <label>
+                    <input type="checkbox" id="chk-energia" onchange="calcularSustentabilidade()"> Energia Renovável
+                </label>
+            </div>
+
+            <div class="resultado">
+                <span>Pontuação de Sustentabilidade: </span>
+                <strong id="pontuacao">0%</strong>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Agrinho | Desenvolvido com Orgulho</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
